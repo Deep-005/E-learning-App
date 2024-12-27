@@ -37,7 +37,6 @@ Set up the Payment Gateway credentials in the app’s settings.
 Build and run the application on an Android emulator or device.
 
 **Screenshots**
-
 ![Screenshot_20241227_200507_Courses](https://github.com/user-attachments/assets/69e66b92-3b72-4929-8306-e0c489bf605d)
 
 ![Screenshot_20241227_200524_Courses](https://github.com/user-attachments/assets/2e15ada6-52d9-4d28-96b9-1101ce4b433f)
@@ -56,10 +55,20 @@ Build and run the application on an Android emulator or device.
 
 ![Screenshot_20241227_200937_Courses](https://github.com/user-attachments/assets/d5c71466-b5ce-43b2-8073-95b8d97d76a6)
 
+![Screenshot_20241227_203520_Courses](https://github.com/user-attachments/assets/8ed63e02-6eea-4d68-b596-662d4cc5a7b6)
 
+![Screenshot_20241227_203506_Courses](https://github.com/user-attachments/assets/842f2bec-cd70-405f-89c5-da5392fceacd)
 
+![Screenshot_20241227_203527_Courses](https://github.com/user-attachments/assets/39e33330-87bb-4e77-9f80-82ae5adda1f8)
 
+![Screenshot_20241227_203546_Courses](https://github.com/user-attachments/assets/b6daf189-650b-4296-ac2d-5cdeaa9962a3)
 
+![Screenshot_20241227_203605_Courses](https://github.com/user-attachments/assets/faa87bd9-7ef7-4597-9a4e-cda99a2df753)
 
+![Screenshot_20241227_203613_Courses](https://github.com/user-attachments/assets/95416574-2867-4dfa-a21a-d7dd38a3dbca)
 
+![Screenshot_20241227_203623_Courses](https://github.com/user-attachments/assets/7b727cae-c6fb-43ca-834c-3ea3a7696a78)
 
+![Screenshot_20241227_203632_Courses](https://github.com/user-attachments/assets/9071b6ed-f310-445f-8e30-73a0ac349e7d)
+
+![Screenshot_20241227_203646_Courses](https://github.com/user-attachments/assets/70aef1c1-c9cb-4622-994c-c570da14f73a)
