@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/prompt_card_bg"
+        android:elevation="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386">
+
+        <ImageButton
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-130dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:contentDescription="@string/logo"
+            android:elevation="5dp"
+            android:background="@drawable/back_btn_bg"
+            android:src="@drawable/arrow" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/otpAnime"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="true"
+            android:layout_marginVertical="@dimen/_5sdp"
+            app:lottie_rawRes="@raw/otp" />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="@string/umail"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:drawableStartCompat="@drawable/umail"
+            android:drawablePadding="@dimen/_5sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/reset_link"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:paddingHorizontal="@dimen/_25sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/otp_tag_email"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp" />
+
+        <Button
+            android:id="@+id/doneBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:backgroundTint="@color/selected"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resend_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_otp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/ripple_effects"
+            android:textColor="@color/selected"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="8dp"
+    android:background="@drawable/bottom_menu_bg"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:paddingBottom="16dp">
+
+    <ImageButton
+        android:id="@+id/no"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/white_back_bg"
+        android:src="@drawable/cut_black_icon"
+        android:contentDescription="@string/logo" />
+
+    <ImageView
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/delete"
+        android:paddingBottom="@dimen/_5sdp"/>
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/del_account"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_10ssp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:paddingHorizontal="@dimen/_15sdp"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <Button
+          android:id="@+id/yes"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_width="@dimen/_150sdp"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:text="@string/delete"
+          android:backgroundTint="@color/unSelected"
+          android:layout_gravity="center_horizontal"
+          android:textColor="@color/white" />
+
+      <ProgressBar
+          android:id="@+id/progressDeletion"
+          android:layout_width="@dimen/_20sdp"
+          android:layout_height="@dimen/_20sdp"
+          android:layout_marginStart="@dimen/_95sdp"
+          android:layout_marginTop="@dimen/_13sdp"
+          android:indeterminate="true"
+          android:indeterminateTint="@color/white"
+          android:visibility="gone"/>
+
+  </RelativeLayout>
+
+</LinearLayout>

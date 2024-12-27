@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:backgroundTint="#FFFEFE"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/liveImg"
+                android:layout_width="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:src="@drawable/live_class"
+                android:layout_height="@dimen/_150sdp"
+                android:contentDescription="@string/live" />
+
+            <TextView
+                android:id="@+id/date_time"
+                android:layout_below="@id/liveImg"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_7sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/live_tag"
+                android:textColor="#673AB7"
+                android:textSize="@dimen/_10ssp"/>
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_below="@id/date_time"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/live_class_link"
+                android:textColor="#035AA0"
+                android:textSize="@dimen/_9ssp"/>
+
+            <TextView
+                android:id="@+id/live_course"
+                android:layout_below="@id/link"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_1sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/course_name"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:id="@+id/live_tutor"
+                android:layout_below="@id/live_course"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/instructorName"
+                android:textColor="#454545"
+                android:textSize="@dimen/_9ssp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"/>
+
+</LinearLayout>

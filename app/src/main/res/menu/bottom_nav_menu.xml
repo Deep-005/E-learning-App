@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_dash"
+        android:icon="@drawable/bottom_btn1"
+        app:iconTint="@color/black"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/search_black"
+        app:iconTint="@color/black"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/nav_live"
+        android:icon="@drawable/cam"
+        app:iconTint="@color/black"
+        android:title="@string/live" />
+    <item
+        android:id="@+id/nav_paid"
+        android:icon="@drawable/book"
+        app:iconTint="@color/black"
+        android:title="@string/paid" />
+    <item
+        android:id="@+id/nav_user"
+        android:icon="@drawable/bottom_btn3"
+        app:iconTint="@color/black"
+        android:title="@string/account" />
+</menu>

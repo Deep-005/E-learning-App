@@ -1,0 +1,90 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashFragment">
+
+    <fragment
+        android:id="@+id/categorizedFragment"
+        android:name="com.example.courses.Fragments.CategorizedFragment"
+        android:label="Categorized"
+        tools:layout="@layout/fragment_categorized">
+        <action
+            android:id="@+id/action_categorizedFragment_to_moreFragment"
+            app:destination="@id/moreFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.courses.Fragments.MoreFragment"
+        android:label="More Courses"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_moreFragment_to_categorizedFragment"
+            app:destination="@id/categorizedFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.example.courses.Fragments.PopularFragment"
+        android:label="All Courses"
+        tools:layout="@layout/fragment_popular" />
+
+    <fragment
+        android:id="@+id/allInternships"
+        android:name="com.example.courses.Fragments.InternshipFragment"
+        android:label="Internship Programs"
+        tools:layout="@layout/fragment_internship" />
+
+    <fragment
+        android:id="@+id/dashFragment"
+        android:name="com.example.courses.Fragments.DashFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dash">
+        <action
+            android:id="@+id/action_dashFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_dashFragment_to_categorizedFragment"
+            app:destination="@id/categorizedFragment"/>
+
+        <action
+            android:id="@+id/action_dashFragment_to_allFragment"
+            app:destination="@id/allFragment" />
+
+        <action
+            android:id="@+id/action_dashFragment_to_allInternships"
+            app:destination="@id/allInternships" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paidFragment"
+        android:name="com.example.courses.Fragments.EnrolledCoursesFragment"
+        android:label="Paid"
+        tools:layout="@layout/fragment_enrolled_courses"/>
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.courses.Fragments.UserFragment"
+        android:label="User"
+        tools:layout="@layout/fragment_user">
+
+        <action
+            android:id="@+id/action_userFragment_to_paidFragment"
+            app:destination="@id/paidFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.courses.Fragments.SearchFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_search"/>
+
+    <fragment
+        android:id="@+id/liveFragment"
+        android:name="com.example.courses.Fragments.LiveFragment"
+        android:label="Live Classes"
+        tools:layout="@layout/fragment_live"/>
+
+</navigation>

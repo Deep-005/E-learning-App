@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NotesAndVideoActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/header_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/selected"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/logo"
+            android:background="@drawable/blue_back_bg"
+            android:src="@drawable/arrow"
+            app:tint="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/this_course"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:gravity="center_vertical"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="@string/course_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:visibility="invisible"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_main"
+        app:layout_constraintVertical_bias="0.0"
+        android:scrollbarThumbVertical="@drawable/scroll"
+        android:scrollbars="vertical"
+        android:background="#EFECEC">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/secondTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:background="#2196F3"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_25sdp">
+
+                <TextView
+                    android:id="@+id/courseNameTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/course_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/light_4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/light_3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.748"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/light_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/light_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <androidx.cardview.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:backgroundTint="@color/white"
+              android:elevation="6dp"
+              android:layout_marginHorizontal="@dimen/_15sdp"
+              android:layout_marginVertical="@dimen/_6sdp"
+              app:cardCornerRadius="@dimen/_8sdp">
+
+              <ImageView
+                  android:id="@+id/coverImage"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:contentDescription="@string/live" />
+
+          </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/course_videos"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/ripple_effects"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:id="@+id/drop_down"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/back_next"
+                    android:rotation="-90"
+                    android:contentDescription="@string/logo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/videosRV"
+                    android:layout_below="@id/cV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:background="@drawable/ripple_effects"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:id="@+id/drop_down_notes"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/back_next"
+                    android:rotation="-90"
+                    android:contentDescription="@string/logo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notesRV"
+                    android:layout_below="@id/cN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quiz2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_10sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/gotoQuiz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quiz"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:background="@drawable/log_reg_options_ripple"
+                        android:paddingVertical="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        app:drawableStartCompat="@drawable/question_mark"
+                        app:drawableEndCompat="@drawable/lock"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_30sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/claim_your_certificate"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_10sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_30sdp">
+
+                    <TextView
+                        android:id="@+id/claimCertificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/certificate_here"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/log_reg_options_ripple"
+                        android:paddingVertical="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        app:drawableStartCompat="@drawable/question_mark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

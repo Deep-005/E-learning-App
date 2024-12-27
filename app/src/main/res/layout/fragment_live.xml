@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.LiveFragment"
+    android:background="#F2F1F1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F5F5"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:text="@string/live_sessions"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"/>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/google_meet"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:textAlignment="center"
+                android:textColor="#5F5F5F"
+                android:textSize="@dimen/_9ssp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/liveRV"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarThumbVertical="@drawable/scroll"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/noLiveClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9ssp"
+                android:text="@string/noLiveClassesYet"
+                android:paddingHorizontal="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_100sdp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+</FrameLayout>

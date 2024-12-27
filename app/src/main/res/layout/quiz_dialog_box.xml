@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="8dp"
+    android:background="@drawable/prompt_card_bg"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:paddingVertical="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/notification"
+            android:contentDescription="@string/logo" />
+
+        <ImageView
+            android:id="@+id/cutQuiz"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/cut_black_icon"
+            android:contentDescription="@string/logo"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quiz_dialog1"
+        android:paddingVertical="@dimen/_5sdp"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quiz_dialog2"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_12ssp"
+        android:paddingTop="@dimen/_3sdp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/cName_for_quiz_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/course_name"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quiz_dialog3"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/question_mark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quiz_dialog4"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_12ssp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_15sdp"/>
+
+</LinearLayout>

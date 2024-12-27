@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="8dp"
+    android:background="@drawable/bottom_menu_bg"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logout"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="@dimen/_5sdp"/>
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_box_heading"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_10ssp"
+        android:textAlignment="center"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/yes"
+            android:backgroundTint="@color/selected"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/no"
+            android:backgroundTint="@color/unSelected"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deleteAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_account"
+        android:paddingVertical="@dimen/_8sdp"
+        android:textColor="#673AB7"
+        android:textAlignment="center"/>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="selected">#0374CE</color>
+    <color name="unSelected">#000000</color>
+    <color name="txtBg">#BEDCF5</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#FF000000</color>
+    <color name="contentTextColor">#020000</color>
+    <color name="darkTextColor">#020000</color>
+</resources>

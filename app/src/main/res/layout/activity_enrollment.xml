@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EnrollmentActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/book_bg">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/selected"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <ImageButton
+                android:id="@+id/backTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow"
+                android:background="@drawable/blue_back_bg"
+                app:tint="@color/white"
+                android:contentDescription="@string/logo" />
+
+            <Button
+                android:id="@+id/topBarEnroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enroll"
+                android:textColor="@color/selected"
+                android:layout_marginStart="@dimen/_185sdp"
+                android:backgroundTint="@color/white"
+                android:visibility="invisible"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+       <ScrollView
+           android:id="@+id/scrollViewEnroll"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <RelativeLayout
+                   android:id="@+id/enrollInfo"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="@dimen/_5sdp"
+                   android:paddingBottom="@dimen/_15sdp">
+
+                   <TextView
+                       android:id="@+id/topic"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/heading"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_26ssp"
+                       android:paddingHorizontal="@dimen/_15sdp"
+                       android:paddingVertical="@dimen/_15sdp"
+                       android:textStyle="bold"
+                       android:fontFamily="@font/google_sans_medium"/>
+
+                   <RelativeLayout
+                       android:id="@+id/demoVideoBox"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginHorizontal="@dimen/_5sdp"
+                       android:background="#DCDCDC"
+                       android:layout_below="@id/topic">
+
+                       <VideoView
+                           android:id="@+id/demoVideo"
+                           android:layout_width="match_parent"
+                           android:layout_height="@dimen/_150sdp"
+                           android:layout_marginHorizontal="@dimen/_15sdp"
+                           android:layout_marginVertical="@dimen/_8sdp" />
+
+                       <com.airbnb.lottie.LottieAnimationView
+                           android:id="@+id/demoVideoLoadingAnimation"
+                           android:layout_centerInParent="true"
+                           android:layout_width="@dimen/_25sdp"
+                           android:layout_height="@dimen/_25sdp"
+                           app:lottie_rawRes="@raw/video_loading"
+                           app:lottie_autoPlay="true"
+                           app:lottie_loop="true"/>
+
+                   </RelativeLayout>
+
+                   <TextView
+                       android:id="@+id/tag_line"
+                       android:layout_below="@id/demoVideoBox"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/some_random_line"
+                       android:textSize="@dimen/_10ssp"
+                       android:textColor="#606060"
+                       android:paddingVertical="@dimen/_5sdp"
+                       android:paddingHorizontal="@dimen/_15sdp"/>
+
+                   <RelativeLayout
+                       android:id="@+id/instructorNameAndPrice"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/tag_line">
+
+                       <TextView
+                           android:id="@+id/instructor"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:text="@string/instructor"
+                           android:textSize="@dimen/_10ssp"
+                           android:textColor="@color/black"
+                           android:textStyle="bold"
+                           android:paddingStart="@dimen/_15sdp"
+                           android:paddingEnd="@dimen/_3sdp" />
+
+                       <TextView
+                           android:id="@+id/instructorName"
+                           android:layout_toEndOf="@id/instructor"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:text="@string/instructorName"
+                           android:textSize="@dimen/_10ssp"
+                           android:textColor="@color/selected" />
+
+                       <TextView
+                           android:layout_toStartOf="@id/price"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:paddingHorizontal="@dimen/_5sdp"
+                           android:layout_centerVertical="true"
+                           android:text="@string/price"
+                           android:textSize="@dimen/_10ssp"
+                           android:textColor="#5A5B5B"
+                           tools:ignore="RelativeOverlap" />
+
+                       <TextView
+                           android:id="@+id/price"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentEnd="true"
+                           android:layout_marginEnd="@dimen/_20sdp"
+                           android:text="Price"
+                           android:textSize="@dimen/_14ssp"
+                           android:textAlignment="viewEnd"
+                           android:textColor="@color/black"
+                           android:textStyle="bold"
+                           tools:ignore="HardcodedText" />
+
+                   </RelativeLayout>
+
+                   <Button
+                       android:id="@+id/enroll"
+                       android:layout_below="@id/instructorNameAndPrice"
+                       android:layout_marginVertical="@dimen/_10sdp"
+                       android:layout_marginHorizontal="@dimen/_15sdp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:paddingVertical="@dimen/_10sdp"
+                       android:text="@string/enroll"
+                       android:textColor="@color/white"
+                       android:textSize="@dimen/_14ssp"
+                       android:backgroundTint="@color/selected"/>
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingHorizontal="@dimen/_15sdp">
+
+                   <TextView
+                       android:id="@+id/textView5"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginHorizontal="@dimen/_25sdp"
+                       android:paddingVertical="@dimen/_10sdp"
+                       android:textSize="@dimen/_16ssp"
+                       android:textStyle="bold"
+                       android:textColor="@color/black"
+                       android:fontFamily="@font/google_sans_medium"
+                       android:textAlignment="center"
+                       android:text="@string/enroll_below"/>
+
+                    <LinearLayout
+                        android:id="@+id/cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_25sdp"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/textView5"
+                        android:layout_marginVertical="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:id="@+id/enroll_card1"
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_200sdp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:elevation="8dp"
+                            android:background="@drawable/enroll_card_bg">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_126sdp"
+                                android:layout_height="@dimen/_170sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:textColor="@color/white"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/nameCourseNext1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ai_2"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:paddingVertical="@dimen/_3sdp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/_12ssp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ai_tag"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="true"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:textColor="@color/black"
+                                    android:paddingVertical="@dimen/_2sdp"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/_9ssp"/>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_70sdp"
+                                    android:layout_height="@dimen/_70sdp"
+                                    android:layout_marginStart="@dimen/_32sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:padding="@dimen/_10sdp"
+                                    android:src="@drawable/ic_1"
+                                    android:contentDescription="@string/logo" />
+
+                                <Button
+                                    android:id="@+id/enrollCourseNext1"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_marginHorizontal="@dimen/_15sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingVertical="@dimen/_2sdp"
+                                    android:text="@string/explore"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_9ssp"
+                                    android:backgroundTint="#FDBE60"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="match_parent"/>
+
+                        <LinearLayout
+                            android:id="@+id/enroll_card2"
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_200sdp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:elevation="8dp"
+                            android:background="@drawable/enroll_card_bg">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_126sdp"
+                                android:layout_height="@dimen/_170sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:textStyle="bold"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:textColor="@color/white"
+                                android:background="@color/white">
+
+                                <TextView
+                                    android:id="@+id/nameCourseNext2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/java"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:paddingVertical="@dimen/_3sdp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/_12ssp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/java_tag"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:textColor="@color/black"
+                                    android:paddingVertical="@dimen/_2sdp"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/_9ssp"/>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_70sdp"
+                                    android:layout_height="@dimen/_70sdp"
+                                    android:layout_marginStart="@dimen/_32sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:src="@drawable/ic_3"
+                                    android:contentDescription="@string/logo" />
+
+                                <Button
+                                    android:id="@+id/enrollCourseNext2"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_marginHorizontal="@dimen/_15sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingVertical="@dimen/_2sdp"
+                                    android:text="@string/explore"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_9ssp"
+                                    android:backgroundTint="#FDBE60"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                   <TextView
+                       android:id="@+id/textView6"
+                       android:layout_below="@id/cards"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/black"
+                       android:text="@string/certificate_line"/>
+
+                   <LinearLayout
+                       android:layout_below="@id/textView6"
+                       android:layout_width="match_parent"
+                       android:layout_marginHorizontal="@dimen/_25sdp"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:gravity="center"
+                       android:layout_height="@dimen/_160sdp"
+                       android:background="@color/selected">
+
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="@dimen/_140sdp"
+                           android:src="@drawable/image_certificate"
+                           android:contentDescription="@string/logo" />
+
+                   </LinearLayout>
+
+               </RelativeLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingVertical="@dimen/_10sdp"
+                   android:paddingHorizontal="@dimen/_15sdp">
+
+                   <TextView
+                       android:id="@+id/aboutHead"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/about_course"
+                       android:paddingVertical="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textStyle="bold"
+                       android:textSize="@dimen/_13ssp"/>
+
+                   <TextView
+                       android:id="@+id/aboutCourse"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/about_course"
+                       android:singleLine="false"
+                       android:paddingVertical="@dimen/_5sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_11ssp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingHorizontal="@dimen/_15sdp"
+                   android:paddingBottom="@dimen/_30sdp"
+                   android:background="#F4F4F4">
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/share_certificate"
+                       android:textStyle="bold"
+                       android:singleLine="false"
+                       android:paddingTop="@dimen/_5sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_13ssp"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/showcase_your_skills"
+                       android:singleLine="false"
+                       android:paddingVertical="@dimen/_5sdp"
+                       android:textColor="#787878"
+                       android:textSize="@dimen/_12ssp"
+                       app:drawableStartCompat="@drawable/small_tick" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/gain"
+                       android:singleLine="false"
+                       android:paddingVertical="@dimen/_5sdp"
+                       android:textColor="#787878"
+                       android:textSize="@dimen/_12ssp"
+                       app:drawableStartCompat="@drawable/small_tick" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/stand"
+                       android:singleLine="false"
+                       android:paddingVertical="@dimen/_5sdp"
+                       android:textColor="#787878"
+                       android:textSize="@dimen/_12ssp"
+                       app:drawableStartCompat="@drawable/small_tick" />
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/land"
+                       android:singleLine="false"
+                       android:paddingVertical="@dimen/_5sdp"
+                       android:textColor="#787878"
+                       android:textSize="@dimen/_12ssp"
+                       app:drawableStartCompat="@drawable/small_tick" />
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_190sdp"
+                       android:contentDescription="@string/live"
+                       android:src="@drawable/demo_img"
+                       android:layout_marginTop="@dimen/_10sdp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingVertical="@dimen/_10sdp"
+                   android:paddingHorizontal="@dimen/_15sdp">
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/why"
+                       android:paddingVertical="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textStyle="bold"
+                       android:textSize="@dimen/_13ssp"/>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_55sdp"
+                       android:orientation="horizontal"
+                       android:background="@drawable/why_box"
+                       android:layout_marginBottom="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:text="@string/_20000_free_courses"
+                           android:paddingVertical="@dimen/_5sdp"
+                           android:textColor="@color/black"
+                           android:textSize="@dimen/_9ssp"
+                           app:drawableTopCompat="@drawable/tick" />
+
+                       <LinearLayout
+                           android:layout_width="1dp"
+                           android:layout_height="match_parent"
+                           android:background="#757474"
+                           android:layout_marginVertical="@dimen/_5sdp"/>
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:text="@string/in_demand_skills_and_tools"
+                           android:paddingVertical="@dimen/_5sdp"
+                           android:textColor="@color/black"
+                           android:textSize="@dimen/_9ssp"
+                           app:drawableTopCompat="@drawable/graph" />
+
+                       <LinearLayout
+                           android:layout_width="1dp"
+                           android:layout_height="match_parent"
+                           android:background="#757474"
+                           android:layout_marginVertical="@dimen/_5sdp"/>
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:text="@string/free_lifetime_access"
+                           android:paddingVertical="@dimen/_5sdp"
+                           android:textColor="@color/black"
+                           android:textSize="@dimen/_9ssp"
+                           app:drawableTopCompat="@drawable/time_icon" />
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+       </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

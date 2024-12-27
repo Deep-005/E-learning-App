@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditActivity"
+    android:background="#ABFFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_profile_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_30sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageButton
+                    android:id="@+id/leaveEditProfile"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:background="@drawable/white_back_bg"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/cut_black_icon"
+                    android:contentDescription="@string/logo" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/header">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/live"
+                    android:src="@drawable/edit"
+                    android:alpha="0.2"/>
+
+                <LinearLayout
+                    android:id="@+id/detailsEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputEmail"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <EditText
+                            android:id="@+id/editName"
+                            style="@style/modifiedEditText"
+                            android:autofillHints="no"
+                            android:hint="@string/username"
+                            android:textColorHint="@color/black"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/user"
+                            android:drawableTint="@color/selected"
+                            android:drawablePadding="@dimen/_5sdp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editPhoneNum"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <EditText
+                            android:id="@+id/editPhoneNumber"
+                            style="@style/modifiedEditText"
+                            android:autofillHints="no"
+                            android:hint="@string/phone_num"
+                            android:textColorHint="@color/black"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/call"
+                            android:drawableTint="@color/selected"
+                            android:drawablePadding="@dimen/_5sdp"
+                            tools:ignore="TextFields" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/passEdit"
+                    android:layout_below="@id/detailsEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/detailsEdit">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/change_password"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/old"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="#02518F">
+
+                        <EditText
+                            android:id="@+id/oldPass"
+                            style="@style/modifiedEditText"
+                            android:autofillHints="no"
+                            android:hint="@string/old_password"
+                            android:textColorHint="@color/black"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/lock"
+                            android:drawableTint="@color/selected"
+                            android:drawablePadding="@dimen/_5sdp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/newP"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="#02518F">
+
+                        <EditText
+                            android:id="@+id/newPass"
+                            style="@style/modifiedEditText"
+                            android:autofillHints="no"
+                            android:hint="@string/new_password"
+                            android:textColorHint="@color/black"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            tools:ignore="TextFields"
+                            android:drawableStart="@drawable/lock"
+                            android:drawableTint="@color/selected"
+                            android:drawablePadding="@dimen/_5sdp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/confirmP"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="#02518F">
+
+                        <EditText
+                            android:id="@+id/confirmPass"
+                            style="@style/modifiedEditText"
+                            android:autofillHints="no"
+                            android:hint="@string/confirm_password"
+                            android:textColorHint="@color/black"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            tools:ignore="TextFields"
+                            android:drawableStart="@drawable/lock"
+                            android:drawableTint="@color/selected"
+                            android:drawablePadding="@dimen/_5sdp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/passEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:paddingHorizontal="@dimen/_30sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/passEdit"
+                    app:layout_constraintVertical_bias="0.197">
+
+                    <Button
+                        android:id="@+id/updateDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/selected"
+                        android:text="@string/update"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

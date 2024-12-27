@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CourseCard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_225sdp"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:elevation="8dp"
+    android:background="#FBFBFB"
+    android:contentDescription="@string/certificates">
+
+    <ImageView
+        android:id="@+id/certificateImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_190sdp"
+        android:contentDescription="@string/live"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downloadCertificate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:padding="@dimen/_4sdp"
+        android:text="@string/download_certificate"
+        android:textColor="#632EC1"
+        android:background="@drawable/ripple_effects"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/certificateImg"
+        app:layout_constraintVertical_bias="0.600" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

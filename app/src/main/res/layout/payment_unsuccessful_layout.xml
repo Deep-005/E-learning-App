@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="8dp"
+    android:background="@drawable/bottom_menu_bg"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:paddingBottom="16dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:contentDescription="@string/logo"
+        app:lottie_rawRes="@raw/unsuccess"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="@dimen/_5sdp"/>
+
+    <TextView
+        android:id="@+id/nonSuccessMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_unsuccessful"
+        android:fontFamily="@font/google_sans_medium"
+        android:textSize="@dimen/_10ssp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/black" />
+
+</LinearLayout>

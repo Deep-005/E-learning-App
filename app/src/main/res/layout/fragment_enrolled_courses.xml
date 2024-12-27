@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.EnrolledCoursesFragment"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@drawable/scroll"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_courses"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"/>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userCoursesRV"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:scrollbarThumbVertical="@drawable/scroll"
+                android:maxHeight="@dimen/_350sdp" />
+
+            <TextView
+                android:id="@+id/userCoursesRVEmptyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9ssp"
+                android:text="@string/emptyUserCoursesRV"
+                android:paddingHorizontal="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_80sdp"
+                android:visibility="gone"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="1dp"
+                android:background="#B3B2B2"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:text="@string/internship_programs"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/internshipsEnrolledRV"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_70sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/userInternshipsEnrolledRVEmptyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="@dimen/_9ssp"
+                android:text="@string/emptyUserInternshipRV"
+                android:paddingHorizontal="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_80sdp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="1dp"
+                android:background="#B3B2B2"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
